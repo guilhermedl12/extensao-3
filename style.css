@@ -9,7 +9,7 @@ body {
 nav {
     background: #306CF1;
     background: linear-gradient(180deg, rgba(48, 108, 241, 1) 0%, rgb(2, 62, 243) 50%);
-    border-radius: 30px;
+    border-radius: 15px;
     margin: 20px 55px;
     display: flex;
     align-items: center; /* Centraliza a logo e o texto verticalmente */
@@ -21,7 +21,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 45px;
+    gap: 50px;
     width: 80%;
 }
 
@@ -71,7 +71,7 @@ img.manchete_img {
 
 .fdash{
     background-color: 	#DCDCDC;
-    border-radius: 30px;
+    border-radius: 15px;
     margin: 20px 55px;
     display: flex;
     align-items: center; /* Centraliza a logo e o texto verticalmente */
@@ -83,7 +83,7 @@ img.manchete_img {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 45px;
+    gap: 50px;
     width: 80%;
 }
 
