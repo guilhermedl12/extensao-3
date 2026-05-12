@@ -2,6 +2,8 @@ body {
     background-color: #f7f7f7;
     color: #011f4b;
     font-family: "Google Sans", sans-serif;
+    width: 75%;
+    margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
 }
 
 nav {
