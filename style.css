@@ -2,18 +2,16 @@ body {
     background-color: #f7f7f7;
     color: #011f4b;
     font-family: "Google Sans", sans-serif;
-    width: 75%;
     margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
 }
 
 nav {
     background: #306CF1;
     background: linear-gradient(180deg, rgba(48, 108, 241, 1) 0%, rgb(2, 62, 243) 50%);
-    border-radius: 15px;
-    margin: 20px 55px;
+    margin: 0;
     display: flex;
     align-items: center; /* Centraliza a logo e o texto verticalmente */
-    height: 75px;
+    height: 85px;
     align-content: center;
 }
 
@@ -67,6 +65,7 @@ img.manchete_img {
     width: 35%;
     border-radius: 35px;
     margin-left: 65px;
+    flex-wrap: wrap;
 }
 
 .fdash{
@@ -77,6 +76,7 @@ img.manchete_img {
     align-items: center; /* Centraliza a logo e o texto verticalmente */
     height: 75px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .fdash_text {
