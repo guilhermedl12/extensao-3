@@ -12,15 +12,20 @@
 </head>
 
 <body>
-    <nav>
-        <img class="logo_bsi" src="assets/uni_bsi.png" alt="logo_uni_bsi">
-        <div class="nav_text">
-            <a href="#inicio"><i class="fa-solid fa-house"></i> Início</a>
-            <a href="#projeto"><i class="fa-solid fa-circle-info"></i> O Projeto</a>
-            <a href="#resultado"><i class="fa-solid fa-chart-line"></i> Resultados</a>
-            <a href="#ajude"><i class="fa-solid fa-people-carry-box"></i> Faça Parte</a>
-        </div>
-    </nav>
+<nav>
+    <img class="logo_bsi" src="assets/uni_bsi.png" alt="logo_uni_bsi">
+    
+    <button class="menu_toggle" aria-label="Abrir menu">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <div class="nav_text">
+        <a href="#inicio"><i class="fa-solid fa-house"></i> Início</a>
+        <a href="#projeto"><i class="fa-solid fa-circle-info"></i> O Projeto</a>
+        <a href="#resultado"><i class="fa-solid fa-chart-line"></i> Resultados</a>
+        <a href="#ajude"><i class="fa-solid fa-people-carry-box"></i> Faça Parte</a>
+    </div>
+</nav>
     <main>
         <div class="main_text">
             <p class="titulo" id="inicio">O Lado Sombrio da Tecnologia: Deepfakes e Cyberbullying</p> <br>
@@ -44,6 +49,22 @@
         <p class="conteudo">Este projeto de extensão, desenvolvido por estudantes de Sistemas de Informação do UNI-RN, busca investigar o impacto das tecnologias de manipulação de imagem e do assédio digital na qualidade de vida e na saúde mental da população. <br> Nosso objetivo é coletar dados reais para fundamentar estratégias de conscientização e proteção contra o uso indevido de inteligência artificial, como os deepfakes. Com os resultados desta pesquisa, pretendemos oferecer recursos educativos que auxiliem a comunidade a identificar fraudes, preservar sua integridade digital e promover um ambiente tecnológico mais ético e seguro.</p>
     </section>
     <script src="https://kit.fontawesome.com/48a52ea465.js" crossorigin="anonymous"></script>
+    <script>
+        const menuToggle = document.querySelector('.menu_toggle');
+        const navText = document.querySelector('.nav_text');
+
+        menuToggle.addEventListener('click', () => {
+            navText.classList.toggle('active');
+        });
+
+        // Opcional: Fecha o menu automaticamente ao clicar em um link
+        document.querySelectorAll('.nav_text a').forEach(link => {
+            link.addEventListener('click', () => {
+                navText.classList.remove('active');
+            });
+        });
+    </script>
+</body>
 </body>
 
 </html>

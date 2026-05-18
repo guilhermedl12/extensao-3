@@ -2,25 +2,53 @@ body {
     background-color: #f7f7f7;
     color: #011f4b;
     font-family: "Google Sans", sans-serif;
-    margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+    margin: 0;
+    padding: 0;
 }
 
 nav {
     background: #306CF1;
     background: linear-gradient(180deg, rgba(48, 108, 241, 1) 0%, rgb(2, 62, 243) 50%);
-    margin: 0;
     display: flex;
-    align-items: center; /* Centraliza a logo e o texto verticalmente */
+    align-items: center;
+    justify-content: space-between; /* Afasta a logo e o botão de menu para as extremidades */
+    padding: 0 20px;
     height: 85px;
-    align-content: center;
+    position: relative;
 }
 
+img.logo_bsi {
+    width: 110px;
+}
+
+/* apenas mobile*/
+.menu_toggle {
+    display: block; 
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* oculta por padrão no mobile */
 .nav_text {
+    display: none; 
+    flex-direction: column;
+    background-color: #023ef3;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    gap: 20px;
+    z-index: 1000;
+    text-align: center;
+}
+
+/* Classe ativada via JavaScript para exibir o menu mobile */
+.nav_text.active {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    width: 80%;
 }
 
 .nav_text a {
@@ -28,110 +56,179 @@ nav {
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
+    display: block;
+    width: 100%;
 }
 
-img.logo_bsi {
-    width: 130px;
-    margin-left: 35px;
-}
-
+/* Secção Principal (Main) */
 main {
-    margin-top: 65px;
-    margin-bottom: 65px;
-    margin-left: 85px;
-    display: flex; /* Cria o layout de colunas para o texto e imagem */
+    margin: 40px 20px;
+    display: flex;
+    flex-direction: column; /* Empilha o texto e a imagem no mobile */
     align-items: center;
-    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .main_text {
-    width: 45%;
+    width: 100%;
     text-align: justify;
 }
 
 p.titulo {
     color: #003CF0;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 28px; /* Tamanho adaptado para ecrãs menores */
     margin-bottom: 0;
+    text-align: center;
 }
 
-p.main_cont {
+p.main-cont {
     font-size: 16px;
-    margin-top: 0;
+    margin-top: 15px;
 }
 
 img.manchete_img {
-    width: 35%;
-    border-radius: 35px;
-    margin-left: 65px;
-    flex-wrap: wrap;
+    width: 85%; /* Maior destaque no mobile */
+    max-width: 400px;
+    border-radius: 25px;
 }
 
-.fdash{
-    background-color: 	#DCDCDC;
+/* Faixa de Dados (Fdash) */
+.fdash {
+    background-color: #DCDCDC;
     border-radius: 15px;
-    margin: 20px 55px;
+    margin: 20px;
+    padding: 20px 10px;
     display: flex;
-    align-items: center; /* Centraliza a logo e o texto verticalmente */
-    height: 75px;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
 }
 
 .fdash_text {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    width: 80%;
+    flex-direction: column; /* Empilha os blocos de dados no mobile */
+    align-items: flex-start;
+    gap: 15px;
+    width: 90%;
 }
 
 .fdash_text a {
     color: #306cf1;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
 }
 
-.titulo-destaque {
-    margin-top: 65px;
-    margin-left: 85px;
-
-  /* Cor, espessura e estilo da linha */
-  border-left: 5px solid #2b6eff; 
-  border-radius: 3px;
-  
-  /* Espaço entre a linha e o texto */
-  padding-left: 15px; 
-  
-  /* Ajustes de fonte para combinar com a imagem */
-  color: #2b6eff;
-  font-weight: 600;
-  font-size: 20px;
-  
-  /* Alinha a altura da linha com o texto */
-  line-height: 1.2; 
-}
-
+/* Secção de Conteúdo de Texto */
 .text-cont {
-    max-width: 40%;  
-    margin-left: 55px;     /* Define uma largura máxima para não esticar demais em telas grandes */        /* Centraliza o bloco inteiro na tela */
-    padding: 20px;         /* Margem interna para o texto não encostar nas bordas em telas pequenas */
+    width: auto;
+    margin: 40px 20px;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Alinha o título (e outros itens) à esquerda */
+    align-items: flex-start;
 }
 
 .titulo-destaque {
+    border-left: 5px solid #2b6eff; 
+    border-radius: 3px;
+    padding-left: 15px; 
+    color: #2b6eff;
     font-weight: bold;
-    font-size: 1.5rem;
-    margin-bottom: 15px;   /* Espaço entre o título e o texto */
-    text-align: left;      /* Garante que o título esteja à esquerda */
-    margin-left: 0;
+    font-size: 22px;
+    line-height: 1.2; 
+    margin-bottom: 15px;
+    text-align: center;
+    align-items: center;
 }
 
 .conteudo {
-    text-align: justify;   /* Justifica o texto */
-    line-height: 1.6;      /* Melhora a legibilidade */
-    width: 100%;           /* Garante que o texto ocupe toda a largura do contêiner centralizado */
+    text-align: justify;
+    line-height: 1.6;
+    width: 100%;
+}
+
+
+/* ==========================================================================
+   MEDIA QUERY: DESKTOP / ECRÃS GRANDES (min-width: 992px)
+   ========================================================================== */
+@media screen and (min-width: 992px) {
+    nav {
+        justify-content: flex-start;
+        padding: 0;
+    }
+
+    img.logo_bsi {
+        width: 130px;
+        margin-left: 35px;
+    }
+
+    /* Oculta o botão de menu de barras no Desktop */
+    .menu_toggle {
+        display: none;
+    }
+
+    /* Restaura a exibição horizontal original do menu */
+    .nav_text {
+        display: flex; 
+        flex-direction: row;
+        position: static;
+        background: none;
+        padding: 0;
+        width: 80%;
+        gap: 50px;
+        justify-content: center;
+    }
+
+    .nav_text a {
+        font-size: 18px;
+        display: inline;
+        width: auto;
+    }
+
+    main {
+        margin-top: 45px;
+        margin-bottom: 65px;
+        margin-left: 85px;
+        flex-direction: row; /* Coloca o texto e a imagem lado a lado */
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .main_text {
+        width: 45%;
+    }
+
+    p.titulo {
+        font-size: 40px;
+        text-align: left;
+    }
+
+    img.manchete_img {
+        width: 30%;
+        max-width: none;
+        margin-left: 65px;
+        margin-right: 85px;
+        border-radius: 35px;
+    }
+
+    .fdash {
+        height: 75px;
+        margin: 20px 55px;
+        padding: 0;
+    }
+
+    .fdash_text {
+        flex-direction: row; /* Dados lado a lado no desktop */
+        gap: 50px;
+        width: 80%;
+    }
+
+    .fdash_text a {
+        font-size: 18px;
+    }
+
+    .text-cont {
+        max-width: 80%;
+        margin-left: 85px;
+    }
 }
