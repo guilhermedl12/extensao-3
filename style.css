@@ -1,5 +1,4 @@
 body {
-    background-color: #f7f7f7;
     color: #011f4b;
     font-family: "Google Sans", sans-serif;
     margin: 0;
@@ -7,7 +6,6 @@ body {
 }
 
 nav {
-    background: #306CF1;
     background: linear-gradient(180deg, rgba(48, 108, 241, 1) 0%, rgb(2, 62, 243) 50%);
     display: flex;
     align-items: center;
@@ -67,6 +65,7 @@ main {
     flex-direction: column; /* Empilha o texto e a imagem no mobile */
     align-items: center;
     gap: 30px;
+    background-size: cover;
 }
 
 .main_text {
@@ -231,4 +230,15 @@ img.manchete_img {
         max-width: 80%;
         margin-left: 85px;
     }
+}
+
+/* Container para controlar o tamanho do gráfico */
+.canvas-container {
+    width: 80%;
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
