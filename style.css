@@ -118,13 +118,18 @@ img.manchete_img {
 }
 
 /* Secção de Conteúdo de Texto */
-.text-cont {
+.pesq_1 {
     width: auto;
     margin: 40px 20px;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+.conteudo{
+    max-width: 50%;
+    flex-wrap: wrap;
 }
 
 .titulo-destaque {
@@ -226,7 +231,7 @@ img.manchete_img {
         font-size: 18px;
     }
 
-    .text-cont {
+    .pesq_1 {
         max-width: 80%;
         margin-left: 85px;
     }
@@ -234,7 +239,7 @@ img.manchete_img {
 
 /* Container para controlar o tamanho do gráfico */
 .canvas-container {
-    width: 80%;
+    width: 35%;
     max-width: 600px;
     background: white;
     padding: 20px;
