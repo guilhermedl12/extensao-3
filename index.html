@@ -4,145 +4,438 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Extensão III</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Extensão III — Deepfakes & Cyberbullying</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/48a52ea465.js" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
 </head>
 
 <body>
     <nav>
-        <img class="logo_bsi" src="assets/uni_bsi.png" alt="logo_uni_bsi">
+        <div class="nav-logo">
+            <img src="assets/uni_bsi.png" alt="UNI-RN BSI" onerror="this.style.display='none'">
+        </div>
 
-        <button class="menu_toggle" aria-label="Abrir menu">
+        <button class="menu-toggle" aria-label="Abrir menu">
             <i class="fa-solid fa-bars"></i>
         </button>
 
-        <div class="nav_text">
+        <div class="nav-links" id="navLinks">
             <a href="#inicio"><i class="fa-solid fa-house"></i> Início</a>
             <a href="#projeto"><i class="fa-solid fa-circle-info"></i> O Projeto</a>
+            <a href="#impacto"><i class="fa-solid fa-shield-halved"></i> Impacto</a>
             <a href="#resultado"><i class="fa-solid fa-chart-line"></i> Resultados</a>
+            <a href="#mitigacao"><i class="fa-solid fa-lock"></i> Mitigação</a>
             <a href="#ajude"><i class="fa-solid fa-people-carry-box"></i> Faça Parte</a>
         </div>
     </nav>
-    <main>
-        <div class="main_text">
-            <p class="titulo" id="inicio">O Lado Sombrio da Tecnologia: Deepfakes e Cyberbullying</p> <br>
-            <p class="main-cont">Bem-vindo ao nosso portal dedicado a desvendar as complexas fronteiras da identidade
-                digital e da segurança online. Aqui, exploramos como a inteligência artificial tem sido distorcida para
-                criar deepfakes que potencializam campanhas de cyberbullying, transformando a desinformação em uma
-                ferramenta de violência psicológica. Nosso objetivo é oferecer recursos, suporte e conhecimento para
-                identificar manipulações, proteger sua imagem e promover um ambiente digital mais ético e seguro para
-                todos. <br> <br> Além da conscientização individual, o enfrentamento ao cyberbullying via deepfakes
-                exige uma abordagem multidisciplinar. O desenvolvimento de ferramentas de detecção automatizada e a
-                implementação de legislações mais rigorosas são passos essenciais para mitigar esses riscos. Como
-                futuros profissionais de Sistemas de Informação, entendemos que a tecnologia deve servir como uma ponte
-                para o progresso, e não como uma arma para a exclusão social. Ao participar desta pesquisa, você
-                contribui diretamente para a construção de um banco de dados que ajudará a mapear a vulnerabilidade
-                digital no Rio Grande do Norte. Juntos, podemos transformar esses dados em ações práticas que protejam a
-                integridade emocional e a qualidade de vida de todos os cidadãos no ambiente virtual.</p>
-        </div>
-        <img class="manchete_img" src="assets/front_img2.png" alt="imagem memphis corporate de segurança">
-    </main>
-    <section class="fdash">
-        <div class="fdash_text">
-            <a> <i class="fa-solid fa-chart-line"></i> <strong> 96% de deepfakes</strong> são pornografia não
-                consensual</a>
-            <a> <i class="fa-solid fa-brain"></i> <strong> Dobro de casos</strong> de IA manipulada a cada 6 meses.</a>
-        </div>
-    </section>
-    <section class="pesq_1">
-        <p class="titulo-destaque" id="projeto">O que buscamos com a pesquisa?</p>
-        <p class="conteudo">Este projeto de extensão, desenvolvido por estudantes de Sistemas de Informação do UNI-RN,
-            busca investigar o impacto das tecnologias de manipulação de imagem e do assédio digital na qualidade de
-            vida e na saúde mental da população. <br> Nosso objetivo é coletar dados reais para fundamentar estratégias
-            de conscientização e proteção contra o uso indevido de inteligência artificial, como os deepfakes. Com os
-            resultados desta pesquisa, pretendemos oferecer recursos educativos que auxiliem a comunidade a identificar
-            fraudes, preservar sua integridade digital e promover um ambiente tecnológico mais ético e seguro.</p>
 
-        <div class="canvas-container">
-            <h2>Pessoas Impactadas</h2>
-            <canvas id="meuGrafico"></canvas>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+        <div class="hero-inner">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Projeto de Extensão · UNI-RN · BSI
+                </div>
+                <h1 style="margin-top:20px;">
+                    O Lado Sombrio<br>
+                    da <span>Tecnologia</span>:<br>
+                    Deepfakes e<br>Cyberbullying
+                </h1>
+                <p class="hero-desc" style="margin-top:20px;">
+                    Um portal dedicado a mapear vulnerabilidades digitais no Rio Grande do Norte.
+                    Exploramos como a inteligência artificial tem sido distorcida para criar deepfakes
+                    que potencializam campanhas de cyberbullying — e como podemos nos proteger.
+                </p>
+            </div>
+            <img class="hero-img" src="assets/front_img2.png" alt="Segurança digital"
+                 onerror="this.style.display='none'">
         </div>
     </section>
 
-    <script src="script.js"></script>
-    <script src="https://kit.fontawesome.com/48a52ea465.js" crossorigin="anonymous"></script>
+    <!-- STAT BANNER -->
+    <div class="stat-banner">
+        <div class="stat-banner-inner">
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fa-solid fa-video"></i></div>
+                <div class="stat-text">
+                    <strong>96% dos deepfakes</strong>
+                    <span>são pornografia não consensual</span>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fa-solid fa-brain"></i></div>
+                <div class="stat-text">
+                    <strong>Dobro de casos a cada 6 meses</strong>
+                    <span>de IA manipulada detectados</span>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                <div class="stat-text">
+                    <strong>40% dos incidentes cibernéticos</strong>
+                    <span>têm IA sem governança como origem</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- O PROJETO -->
+    <section class="section about-section" id="projeto">
+        <div class="section-inner">
+            <div class="section-label">O Projeto</div>
+            <h2 class="section-title">O que buscamos <span>com a pesquisa?</span></h2>
+            <div class="divider"></div>
+            <p class="section-body">
+                Este projeto de extensão, desenvolvido por estudantes de Sistemas de Informação do UNI-RN,
+                investiga o impacto das tecnologias de manipulação de imagem e do assédio digital na qualidade
+                de vida e na saúde mental da população. Nosso objetivo é coletar dados reais para fundamentar
+                estratégias de conscientização e proteção contra o uso indevido de inteligência artificial.
+            </p>
+            <p class="section-body" style="margin-top:14px;">
+                Com os resultados desta pesquisa, pretendemos oferecer recursos educativos que auxiliem a
+                comunidade a identificar fraudes, preservar sua integridade digital e promover um ambiente
+                tecnológico mais ético e seguro para todos os cidadãos do RN.
+            </p>
+
+            <div class="about-grid" style="margin-top:40px;">
+                <div class="pillar-card">
+                    <div class="pillar-icon blue"><i class="fa-solid fa-database"></i></div>
+                    <div class="pillar-content">
+                        <h3>Coleta de dados reais</h3>
+                        <p>Mapeamento de vulnerabilidades e experiências com ameaças digitais na população do RN.</p>
+                    </div>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon red"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <div class="pillar-content">
+                        <h3>Análise e conscientização</h3>
+                        <p>Transformar dados em estratégias práticas de educação e proteção digital acessíveis a todos.</p>
+                    </div>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon green"><i class="fa-solid fa-seedling"></i></div>
+                    <div class="pillar-content">
+                        <h3>Impacto na qualidade de vida</h3>
+                        <p>Compreender como ameaças digitais afetam a saúde mental e o bem-estar dos cidadãos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMPACTO E CONTEXTO PDF -->
+    <section class="section context-section" id="impacto">
+        <div class="section-inner">
+            <div class="section-label">Contexto e Impacto</div>
+            <h2 class="section-title">A cibersegurança como <span>componente do bem-estar</span></h2>
+            <div class="divider"></div>
+            <p class="section-body">
+                Pela ótica da <strong>"Abordagem das Capacidades"</strong> de Amartya Sen, o bem-estar digital
+                não se mede apenas pelo acesso a dispositivos, mas pela capacidade de usar a tecnologia
+                de forma despreocupada e livre de receios. Quando a segurança da informação falha,
+                o usuário perde sua liberdade real no ambiente digital.
+            </p>
+
+            <div class="context-grid">
+                <div class="context-card">
+                    <h3><i class="fa-solid fa-percent"></i> Exposição de Dados</h3>
+                    <div class="stat-highlight">47%</div>
+                    <p>dos adultos em mercados digitalizados já tiveram informações pessoais sensíveis
+                    expostas ou exploradas, criando um estado de ansiedade digital permanente.</p>
+                </div>
+                <div class="context-card red-accent">
+                    <h3><i class="fa-solid fa-heart-crack"></i> Impactos Psicológicos</h3>
+                    <p>Vítimas de crimes cibernéticos desenvolvem depressão clínica, ansiedade crônica,
+                    ataques de pânico e distúrbios do sono. Apenas <strong>3% da população</strong>
+                    acredita estar imune a cibercrimes.</p>
+                </div>
+                <div class="context-card green-accent">
+                    <h3><i class="fa-solid fa-person-cane"></i> Vulnerabilidade na Terceira Idade</h3>
+                    <div class="stat-highlight">62%</div>
+                    <p>dos idosos já sofreram crimes cibernéticos. Durante a pandemia, ataques de
+                    engenharia social contra idosos cresceram <strong>45%</strong>.</p>
+                </div>
+                <div class="context-card purple-accent">
+                    <h3><i class="fa-solid fa-shield"></i> Operadores de Segurança</h3>
+                    <div class="stat-highlight">35%</div>
+                    <p>dos profissionais de segurança em contextos de guerra cibernética manifestam
+                    sintomas de Transtorno de Estresse Pós-Traumático (TEPT).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CYBERBULLYING PDF -->
+    <section class="section" id="cyberbullying" style="background: var(--white);">
+        <div class="section-inner">
+            <div class="section-label">Violência Digital</div>
+            <h2 class="section-title">Cyberbullying <span>no ambiente universitário</span></h2>
+            <div class="divider"></div>
+            <p class="section-body">
+                O cyberbullying é uma das principais ameaças à qualidade de vida e ao bem-estar psicossocial
+                no ambiente educacional superior. Estudos com <strong>1.412 estudantes universitários</strong>
+                (642 do Brasil e 770 de Portugal) revelam a dimensão do problema e os perfis de envolvimento.
+            </p>
+
+            <div class="cb-profile-grid">
+                <div class="cb-profile-item">
+                    <div class="cb-profile-dot"></div>
+                    <div>
+                        <h4>Papel do clima universitário</h4>
+                        <p>Instituições com melhores programas de suporte e integração apresentam índices
+                        menores de cyberbullying. O acolhimento institucional age como fator protetivo.</p>
+                    </div>
+                </div>
+                <div class="cb-profile-item">
+                    <div class="cb-profile-dot red"></div>
+                    <div>
+                        <h4>Perfis de envolvimento</h4>
+                        <p>Os perfis variam entre vítimas, agressores e observadores, com diferenças
+                        conforme gênero, faixa etária, cultura, área científica e ano de escolaridade.</p>
+                    </div>
+                </div>
+                <div class="cb-profile-item">
+                    <div class="cb-profile-dot yellow"></div>
+                    <div>
+                        <h4>Vitimização nas mídias sociais</h4>
+                        <p>A violência digital nas redes gera sentimentos severos e demanda estratégias
+                        específicas de enfrentamento para vítimas e agressores.</p>
+                    </div>
+                </div>
+                <div class="cb-profile-item">
+                    <div class="cb-profile-dot"></div>
+                    <div>
+                        <h4>Conexão com a realidade</h4>
+                        <p>A violência digital está diretamente conectada ao mundo real dos estudantes,
+                        impactando significativamente a convivência e a saúde mental.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEEPFAKES — VULN SECTION -->
+    <section class="section vuln-section">
+        <div class="section-inner">
+            <div class="section-label">Deepfakes & IA</div>
+            <h2 class="section-title">Como os deepfakes <span>afetam a vida real</span></h2>
+            <div class="divider"></div>
+            <p class="section-body" style="color:rgba(255,255,255,.7);">
+                Os deepfakes são conteúdos em vídeo, áudio ou imagem gerados artificialmente por algoritmos
+                de aprendizagem profunda (GANs). Com realismo impressionante, criam graves implicações
+                éticas e psicológicas que vão muito além do mundo virtual.
+            </p>
+
+            <div class="vuln-grid">
+                <div class="vuln-item">
+                    <div class="vuln-num">01</div>
+                    <div class="vuln-content">
+                        <h3>Danos à saúde mental e imagem</h3>
+                        <p>Pornografia não consensual e campanhas de difamação causam traumas profundos
+                        e prejuízos permanentes à integridade psicológica das vítimas.</p>
+                    </div>
+                </div>
+                <div class="vuln-item">
+                    <div class="vuln-num">02</div>
+                    <div class="vuln-content">
+                        <h3>Insegurança financeira</h3>
+                        <p>A clonagem de voz (voice spoofing) em engenharia social ameaça diretamente
+                        o patrimônio financeiro dos cidadãos.</p>
+                    </div>
+                </div>
+                <div class="vuln-item">
+                    <div class="vuln-num">03</div>
+                    <div class="vuln-content">
+                        <h3>Desestabilização social</h3>
+                        <p>O "Dividendo do Mentiroso" faz com que a própria verdade passe a ser
+                        questionável, alimentando a ansiedade coletiva e a desconfiança nas instituições.</p>
+                    </div>
+                </div>
+                <div class="vuln-item">
+                    <div class="vuln-num">04</div>
+                    <div class="vuln-content">
+                        <h3>Desamparo aprendido</h3>
+                        <p>A ameaça digital invisível e constante gera a sensação psicológica de que,
+                        independentemente das precauções, o indivíduo será atacado eventualmente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESULTADOS / GRÁFICOS -->
+    <section class="section results-section" id="resultado">
+        <div class="section-inner">
+            <div class="section-label">Dados da Pesquisa</div>
+            <h2 class="section-title">Resultados <span>coletados</span></h2>
+            <div class="divider"></div>
+            <p class="section-body charts-intro">
+                Os gráficos abaixo refletem respostas reais coletadas junto à comunidade do RN.
+                Os dados são atualizados automaticamente a partir do nosso formulário de pesquisa
+                e revelam padrões de exposição, ansiedade e vulnerabilidade digital dos entrevistados.
+            </p>
+
+            <div class="charts-grid">
+
+                <!-- Gráfico 1 -->
+                <div class="chart-card">
+                    <div class="chart-card-header">
+                        <span class="chart-tag">Saúde Mental</span>
+                        <h3>Impacto Psicológico da Exposição</h3>
+                        <p>Correlação entre exposição a vazamentos de dados e relatos de ansiedade constante.
+                           Evidencia como a experiência de ter dados expostos potencializa o sofrimento
+                           psicológico, mesmo entre quem ainda não sofreu violação confirmada.</p>
+                    </div>
+                    <div class="chart-canvas-wrap">
+                        <canvas id="graficoAnsiedade"></canvas>
+                    </div>
+                </div>
+
+                <!-- Gráfico 2 -->
+                <div class="chart-card">
+                    <div class="chart-card-header">
+                        <span class="chart-tag">Por Área de Formação</span>
+                        <h3>Ameaças por Curso</h3>
+                        <p>Distribuição de relatos de deepfakes e voice spoofing agrupados pela área
+                           de formação dos entrevistados. Permite identificar quais perfis acadêmicos
+                           estão mais expostos a cada tipo de ameaça baseada em IA.</p>
+                    </div>
+                    <div class="chart-canvas-wrap">
+                        <canvas id="graficoCursos"></canvas>
+                    </div>
+                </div>
+
+                <!-- Gráfico 3 -->
+                <div class="chart-card">
+                    <div class="chart-card-header">
+                        <span class="chart-tag">Incerteza Digital</span>
+                        <h3>Radar da Incerteza — Exposição de Dados</h3>
+                        <p>Distribuição da certeza que os entrevistados têm sobre o vazamento de seus
+                           dados. O segmento "Ponto Cego" — quem não tem certeza — revela uma camada
+                           oculta de vulnerabilidade que muitas vezes passa despercebida.</p>
+                    </div>
+                    <div class="chart-canvas-wrap doughnut">
+                        <canvas id="graficoIncerteza"></canvas>
+                    </div>
+                </div>
+
+                <!-- Gráfico 4 -->
+                <div class="chart-card">
+                    <div class="chart-card-header">
+                        <span class="chart-tag">Perfil IA</span>
+                        <h3>Perfil da Ameaça Baseada em IA</h3>
+                        <p>Comparativo entre tentativas ou relatos de deepfakes visuais e voice spoofing
+                           (clonagem de voz). Identifica qual das duas modalidades de ataque baseado em
+                           inteligência artificial é mais prevalente na amostra estudada.</p>
+                    </div>
+                    <div class="chart-canvas-wrap">
+                        <canvas id="graficoPerfilIA"></canvas>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MITIGAÇÃO -->
+    <section class="section mitigation-section" id="mitigacao">
+        <div class="section-inner">
+            <div class="section-label">Caminhos de Proteção</div>
+            <h2 class="section-title">Três pilares para <span>mitigar os riscos</span></h2>
+            <div class="divider"></div>
+            <p class="section-body">
+                A proteção do bem-estar digital exige uma resposta institucional coordenada entre Estados,
+                corporações e universidades — não apenas soluções individuais. A análise crítica rejeita
+                abordagens meramente "residuais" que transferem toda a responsabilidade ao indivíduo.
+            </p>
+
+            <div class="mit-pillars">
+                <div class="mit-pillar">
+                    <div class="mit-pillar-num">Pilar 01</div>
+                    <h3>Espaços de Acolhimento</h3>
+                    <p>No ambiente acadêmico, instituições precisam promover ativamente espaços de
+                    acolhimento para melhorar a convivência e salvaguardar a saúde mental, agindo
+                    diretamente na prevenção do cyberbullying.</p>
+                </div>
+                <div class="mit-pillar">
+                    <div class="mit-pillar-num">Pilar 02</div>
+                    <h3>Mecanismos Técnicos e Forenses</h3>
+                    <p>Investimento em detecção forense de deepfakes — identificando anomalias biológicas
+                    como fluxo sanguíneo facial — aliado a registros criptográficos e autenticação
+                    de conteúdo (iniciativas C2PA).</p>
+                </div>
+                <div class="mit-pillar">
+                    <div class="mit-pillar-num">Pilar 03</div>
+                    <h3>Literacia e Inclusão Digital</h3>
+                    <p>Capacitação crítica dos cidadãos para o consumo de informações. Apenas
+                    <strong>28% da população idosa</strong> possui acesso a programas de inclusão
+                    digital para superar barreiras técnicas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLACEHOLDER: NOVO TÓPICO
+    <div class="placeholder-section" id="novo-topico-1">
+        <div class="placeholder-inner">
+            <div class="ph-icon"><i class="fa-regular fa-square-plus"></i></div>
+            <h3>Novo Tópico — Em Breve</h3>
+            <p>Seção reservada para novos conteúdos e resultados da pesquisa.</p>
+        </div>
+    </div>
+    -->
+
+    <!-- FAÇA PARTE -->
+    <section class="section cta-section" id="ajude">
+        <div class="section-inner">
+            <div class="section-label" style="color:var(--blue-100);">Participe</div>
+            <h2 class="section-title">Faça parte<br>desta pesquisa</h2>
+            <div class="divider" style="background:rgba(255,255,255,.4);"></div>
+            <p class="section-body">
+                Ao responder nosso formulário, você contribui diretamente para a construção de um banco
+                de dados que ajudará a mapear a vulnerabilidade digital no Rio Grande do Norte. Juntos,
+                podemos transformar esses dados em ações práticas que protejam a integridade emocional
+                e a qualidade de vida de todos os cidadãos no ambiente virtual.
+            </p>
+            <a href="#" class="cta-btn">
+                <i class="fa-solid fa-arrow-right"></i>
+                Responder o formulário
+            </a>
+        </div>
+    </section>
+
+    <!-- ========= PLACEHOLDER: NOVOS TEXTOS ========= 
+    <div class="placeholder-section" id="novo-topico-2">
+        <div class="placeholder-inner">
+            <div class="ph-icon"><i class="fa-regular fa-square-plus"></i></div>
+            <h3>Seção Adicional — Em Breve</h3>
+            <p>Espaço para novos textos, análises ou recursos educativos.</p>
+        </div>
+    </div>
+    -->
+
+    <!-- FOOTER-->
+    <footer>
+        <p><strong>Extensão III</strong> · Sistemas de Informação · UNI-RN</p>
+        <p style="margin-top:6px;">Projeto acadêmico de pesquisa e conscientização sobre segurança digital.</p>
+    </footer>
+
     <script>
-        const menuToggle = document.querySelector('.menu_toggle');
-        const navText = document.querySelector('.nav_text');
-
-        menuToggle.addEventListener('click', () => {
-            navText.classList.toggle('active');
+        // Nav mobile toggle
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.getElementById('navLinks').classList.toggle('open');
         });
-
-        // Opcional: Fecha o menu automaticamente ao clicar em um link
-        document.querySelectorAll('.nav_text a').forEach(link => {
+        document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
-                navText.classList.remove('active');
+                document.getElementById('navLinks').classList.remove('open');
             });
         });
     </script>
-
-<!--  Gráfico 1: Impacto Psicológico - Exposição vs. Ansiedade  --> 
-
-<section class="grafico-section" style="margin-bottom: 40px; padding: 20px; border: 1px solid #e0e0e0; border-radius: 10px; background-color: #fcfcfc;">
-    <h2>1. Impacto Psicológico: Exposição vs. Ansiedade</h2>
-    <p style="color: #555; margin-bottom: 20px;">
-        Este painel correlaciona as vítimas de vazamento de dados com o desenvolvimento de sintomas de alerta constante, evidenciando o <strong>desamparo aprendido</strong> no ecossistema digital.
-    </p>
-<!-- Gráfico 1: Impacto Psicológico - Exposição vs. Ansiedade (Box) -->
-    <div class="grafico-box" style="max-width: 600px; margin: 0 auto;">
-        <canvas id="graficoAnsiedade"></canvas>
-    </div>
-</section>
-
-<!-- Gráfico 2: Mapeamento de Ameaças (Engenharia Social) -->
-<section class="grafico-section" style="margin-bottom: 40px; padding: 20px; border: 1px solid #e0e0e0; border-radius: 10px; background-color: #fcfcfc;">
-    <h2>2. Mapeamento de Ameaças (Engenharia Social)</h2>
-    <p style="color: #555; margin-bottom: 20px;">
-        Análise da exposição a ataques cibernéticos modernos (Deepfakes e Voice Spoofing) agrupada pelos cursos de graduação da instituição.
-    </p>
-
-<!-- Gráfico 2: Mapeamento de Ameaças (Engenharia Social) [Box] -->
-    <div class="grafico-box" style="max-width: 700px; margin: 0 auto;">
-        <canvas id="graficoCursos"></canvas>
-    </div>
-</section>
-<!-- Gráfico 3: O Radar da Incerteza -->
-<section class="grafico-section" style="margin-bottom: 40px; padding: 20px; border: 1px solid #e0e0e0; border-radius: 10px; background-color: #fcfcfc;">
-    <h2>3. O Radar da Incerteza</h2>
-    <p style="color: #555; margin-bottom: 20px;">
-        Mapeamento da percepção de vazamento de dados. A fatia de incerteza evidencia o <strong>ponto cego</strong> e a falta de letramento digital sobre a própria exposição e segurança das informações.
-    </p>
-<!-- Gráfico 3: O Radar da Incerteza [Box] -->
-<div class="grafico-box">
-    <canvas id="graficoIncerteza"></canvas>
-    
-    <div id="totalCentral" class="total-central">
-        <div class="label-texto">Total</div>
-        <div id="valorTotal" class="valor-texto">0</div>
-    </div>
-</div>
-</div>
-</section>
-<!-- Gráfico 4: Perfil da Ameaça Baseada em IA -->
-<section class="grafico-section" style="margin-bottom: 40px; padding: 20px; border: 1px solid #e0e0e0; border-radius: 10px; background-color: #fcfcfc;">
-    <h2>4. Perfil da Ameaça Baseada em IA</h2>
-    <p style="color: #555; margin-bottom: 20px;">
-        Comparativo da incidência de ataques modernos de engenharia social (Deepfakes vs. Voice Spoofing). Estes dados guiam as diretrizes preventivas do nosso programa.
-    </p>
-<!-- Gráfico 4: Perfil da Ameaça Baseada em IA [Box] -->
-    <div class="grafico-box" style="max-width: 600px; margin: 0 auto;">
-        <canvas id="graficoPerfilIA"></canvas>
-    </div>
-</section>
-<script src="script.js"></script>
-    
 </body>
-</body>
-
 </html>
