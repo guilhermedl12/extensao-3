@@ -247,3 +247,32 @@ img.manchete_img {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
+
+/* Container do Gráfico */
+.grafico-box {
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* O "Total" Centralizado */
+.total-central {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    pointer-events: none; /* Isso é crucial: o mouse ignora esse texto e clica no gráfico */
+}
+
+/* Estilização do texto dentro da bolinha */
+.total-central .label-texto {
+    font-size: 14px;
+    color: #666;
+}
+
+.total-central .valor-texto {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}

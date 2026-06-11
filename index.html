@@ -86,6 +86,62 @@
             });
         });
     </script>
+
+<!--  Gráfico 1: Impacto Psicológico - Exposição vs. Ansiedade  --> 
+
+<section class="grafico-section" style="margin-bottom: 40px; padding: 20px; border: 1px solid #e0e0e0; border-radius: 10px; background-color: #fcfcfc;">
+    <h2>1. Impacto Psicológico: Exposição vs. Ansiedade</h2>
+    <p style="color: #555; margin-bottom: 20px;">
+        Este painel correlaciona as vítimas de vazamento de dados com o desenvolvimento de sintomas de alerta constante, evidenciando o <strong>desamparo aprendido</strong> no ecossistema digital.
+    </p>
+<!-- Gráfico 1: Impacto Psicológico - Exposição vs. Ansiedade (Box) -->
+    <div class="grafico-box" style="max-width: 600px; margin: 0 auto;">
+        <canvas id="graficoAnsiedade"></canvas>
+    </div>
+</section>
+
+<!-- Gráfico 2: Mapeamento de Ameaças (Engenharia Social) -->
+<section class="grafico-section" style="margin-bottom: 40px; padding: 20px; border: 1px solid #e0e0e0; border-radius: 10px; background-color: #fcfcfc;">
+    <h2>2. Mapeamento de Ameaças (Engenharia Social)</h2>
+    <p style="color: #555; margin-bottom: 20px;">
+        Análise da exposição a ataques cibernéticos modernos (Deepfakes e Voice Spoofing) agrupada pelos cursos de graduação da instituição.
+    </p>
+
+<!-- Gráfico 2: Mapeamento de Ameaças (Engenharia Social) [Box] -->
+    <div class="grafico-box" style="max-width: 700px; margin: 0 auto;">
+        <canvas id="graficoCursos"></canvas>
+    </div>
+</section>
+<!-- Gráfico 3: O Radar da Incerteza -->
+<section class="grafico-section" style="margin-bottom: 40px; padding: 20px; border: 1px solid #e0e0e0; border-radius: 10px; background-color: #fcfcfc;">
+    <h2>3. O Radar da Incerteza</h2>
+    <p style="color: #555; margin-bottom: 20px;">
+        Mapeamento da percepção de vazamento de dados. A fatia de incerteza evidencia o <strong>ponto cego</strong> e a falta de letramento digital sobre a própria exposição e segurança das informações.
+    </p>
+<!-- Gráfico 3: O Radar da Incerteza [Box] -->
+<div class="grafico-box">
+    <canvas id="graficoIncerteza"></canvas>
+    
+    <div id="totalCentral" class="total-central">
+        <div class="label-texto">Total</div>
+        <div id="valorTotal" class="valor-texto">0</div>
+    </div>
+</div>
+</div>
+</section>
+<!-- Gráfico 4: Perfil da Ameaça Baseada em IA -->
+<section class="grafico-section" style="margin-bottom: 40px; padding: 20px; border: 1px solid #e0e0e0; border-radius: 10px; background-color: #fcfcfc;">
+    <h2>4. Perfil da Ameaça Baseada em IA</h2>
+    <p style="color: #555; margin-bottom: 20px;">
+        Comparativo da incidência de ataques modernos de engenharia social (Deepfakes vs. Voice Spoofing). Estes dados guiam as diretrizes preventivas do nosso programa.
+    </p>
+<!-- Gráfico 4: Perfil da Ameaça Baseada em IA [Box] -->
+    <div class="grafico-box" style="max-width: 600px; margin: 0 auto;">
+        <canvas id="graficoPerfilIA"></canvas>
+    </div>
+</section>
+<script src="script.js"></script>
+    
 </body>
 </body>
 
