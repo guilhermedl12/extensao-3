@@ -463,6 +463,7 @@ nav {
     grid-template-columns: 1fr;
     gap: 28px;
     margin-top: 40px;
+    position: relative;
 }
 
 .chart-card {
@@ -839,5 +840,46 @@ footer strong {
 
     .section {
         padding: var(--section-gap) 48px;
+    }
+}
+.amostra-centro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    color: var(--neutral-700);
+    border: 1px solid var(--neutral-200);
+    padding: 10px 28px;
+    border-radius: 100px; /* Deixa com formato de pílula redonda */
+    font-size: 14px;
+    box-shadow: var(--shadow-md);
+    z-index: 10; /* Garante que fique por cima dos gráficos */
+    margin: 0 auto;
+    width: fit-content;
+    
+    /* No celular (1 coluna), ele ficará como uma linha normal entre os gráficos */
+    grid-column: 1 / -1; 
+}
+
+.amostra-centro strong {
+    color: var(--blue-600);
+    font-weight: 700;
+    margin-left: 6px;
+}
+
+/* Regra para telas grandes (Desktop - Grid 2x2) */
+@media (min-width: 768px) {
+    .charts-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 1fr; 
+        gap: 64px 28px;
+    }
+
+    .amostra-centro {
+        position: absolute;
+        top: 50%; 
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        border: 6px solid var(--white); 
     }
 }
